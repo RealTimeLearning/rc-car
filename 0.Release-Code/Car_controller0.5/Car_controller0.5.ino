@@ -188,7 +188,7 @@ void DisplayDistance()
   output(0x03, hundreds);
   output(0x02, tens);
   output(0x01, ones); //digit 0 (rightmost digit) data
-  Serial,print(hundreds);
+  Serial.print(hundreds);
   Serial.print(tens);
   Serial.print(ones);
   Serial.println("\n");
