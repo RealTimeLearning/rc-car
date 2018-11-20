@@ -1,6 +1,6 @@
 /*
 * Car driving code created by Stephen Baker
-* Version 0.7: Ultrasonic: Follow-Me
+* Version 0.8: Line-Following
 * "CH-" to turn OFF ultrasonic 
 * "CH " for Self-Stopping mode
 * "CH+" for Follow-Me mode
