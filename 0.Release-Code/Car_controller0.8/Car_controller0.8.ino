@@ -35,8 +35,8 @@ long duration, distance;
 int ones, tens, hundreds;
 
 //Line following
-#define lightsensor1 0
-#define lightsensor2 1
+#define lightsensor1 3
+#define lightsensor2 4
 int lightval1 = 0;
 int lightval2 = 0;
 
@@ -284,7 +284,7 @@ lightval1 = digitalRead(lightsensor1);
 lightval2 = digitalRead(lightsensor2);
 //Serial.println(lightval2);
 
-if (lightval1 == 0 && lightval2 == 0){ // forward
+if (lightval1 == 1 && lightval2 == 1){ // forward
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
     analogWrite(enA, 75);
@@ -293,7 +293,7 @@ if (lightval1 == 0 && lightval2 == 0){ // forward
     analogWrite(enB, 75);
     delay(30);
   }
-else if (lightval1 == 0 && lightval2 == 1) { //right
+else if (lightval1 == 1 && lightval2 == 0) { //right
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
     analogWrite(enA, 85);
@@ -302,7 +302,7 @@ else if (lightval1 == 0 && lightval2 == 1) { //right
     analogWrite(enB, 110);
     delay(30);
   }
-else if (lightval1 == 1 && lightval2 == 0) { //left
+else if (lightval1 == 0 && lightval2 == 1) { //left
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
     analogWrite(enA, 100);
@@ -311,7 +311,7 @@ else if (lightval1 == 1 && lightval2 == 0) { //left
     analogWrite(enB, 75);
     delay(30);
 }
-else if (lightval1 == 1 && lightval2 == 1) { //right
+else if (lightval1 == 0 && lightval2 == 0) { //right
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
     analogWrite(enA, 85);
